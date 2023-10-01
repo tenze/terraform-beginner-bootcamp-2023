@@ -140,3 +140,46 @@ All future workspaces launched will set the env vars for all bash terminals open
 
 You can also set env vars in the `.gitpod.yml` but this can only contain non-sensitive env vars.
 
+### AWS CLI Installation
+
+AWS CLI is installed for the project via the bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
+
+[Getting Started Install (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+[AWS CLI Env Vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+We can check if our AWS credentials is configured correctly by running the following AWS CLI command: 
+
+```sh
+aws sts get-caller-identity
+```
+If it is successful you should see a json playload return that looks like this : 
+
+```json
+{
+"UserID":"ADIRNKNDKLJLWER",
+"Account": "123456789012",
+"Arn": "arn:aws:iam::123456789012:user/terraform-beginner-bootcamp"
+}
+
+```
+
+We'll need to generate AWS CLI credits from IAM User in order to the user AWS CLI.
+
+Steps to generate AWS CLI credits: 
+
+You need aws account if not create an AWS account. 
+- Type IAM in the search box.
+- Select IAM and create a user with permission to Admin from the group name.
+  ( if no group has been created than you need to first create a group with administrative access option ).
+- Select User and go to Security Credentials.
+- Under Access Keys, Select Create access key and choose the option Command    
+  Line Interface (CLI) and select create access key.
+- You can either save the UserID and access key or you can download the 
+  .csv file on your local machine for future references. 
+You can check to see if it run with following command in terminal/aws-cli
+
+```sh
+./bin/install_aws_cli
+```
+

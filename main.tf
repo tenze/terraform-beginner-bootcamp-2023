@@ -1,2 +1,23 @@
-# this is my first Change
-# this is my 2nd Change
+terraform {
+  required_providers {
+    random = {
+      source = "hashicorp/random"
+      version = "3.5.1"
+    }
+  }
+}
+
+provider "random" {
+  #Configuration option
+}
+
+
+resource "random_string" "bucket_name" {
+  length           = 16
+  special          = false
+}
+
+output "random_bucket_name" {
+  value = random_string.bucket_name.result
+}
+

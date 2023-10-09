@@ -248,3 +248,10 @@ If you loose this file, you loose knowing the state of you infrastructure.
 
 `.terraform` directory contains binaries of terraform providers.
 
+#### Creating s3 bucket in Terraform
+
+Based on documentation on creating bucket name, we changed the following configuration file :
+- Lowercase to true.
+- uppercase to false.
+- Name length changed to 32.
+

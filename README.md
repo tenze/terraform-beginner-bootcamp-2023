@@ -255,3 +255,37 @@ Based on documentation on creating bucket name, we changed the following configu
 - uppercase to false.
 - Name length changed to 32.
 
+## Issues with Terraform Cloud and Gitpod Workspace
+
+When attempting to run `terraform login` it will launch bash a wiswig view to generate a token. However it does not work as expected in Gitpod Vscode in the browser. 
+
+The workaround is maually generate a token in Terraform Cloud. 
+
+```
+https://app.terraform.io/app/settings/token?source=terraform-login
+```
+
+Then create open the file manually here: 
+
+```sh
+touch /home/gitpod/.terraform.d/credentials.tfrc.json
+open /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+
+Provide the following code (replace your token in the file):
+
+Then open the file
+
+```JSON
+{
+  "credentials":{
+    "app.terraform.io":{
+      "token": "YOUR-TERRAFORM-CLOUD-TOKEN
+    }
+  }
+}
+```
+
+```
+
+```

@@ -1,5 +1,11 @@
 # Terraform Beginner Bootcamp 2023
 
+## Table of Content
+
+-[Semantic Versioning](#sementic-versioning)
+-[Install the Terraform CLI](#aws-cli-installation)
+  -[Consideration-with-the-terraform-cli-changes](#considerations-with-the-terraform-cli-changes)
+
 ## Sementic Versioning :mage: 
 
 This project is going to unitlize semantic versining for its tagging. 

@@ -2,8 +2,8 @@
 
 ## Table of Content
 
--[Semantic Versioning](#sementic-versioning)
--[Install the Terraform CLI](#aws-cli-installation)
+- [Semantic Versioning](#sementic-versioning)
+- [Install the Terraform CLI](#aws-cli-installation)
   -[Consideration-with-the-terraform-cli-changes](#considerations-with-the-terraform-cli-changes)
 
 ## Sementic Versioning :mage: 
